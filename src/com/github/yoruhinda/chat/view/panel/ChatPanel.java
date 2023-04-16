@@ -5,7 +5,6 @@ import java.awt.*;
 
 public class ChatPanel extends JPanel {
     private JEditorPane chat = new JEditorPane();
-    private JScrollPane chatScrollPane = new JScrollPane(chat);
 
     public ChatPanel(){
         initialize();
@@ -14,7 +13,12 @@ public class ChatPanel extends JPanel {
     private void initialize(){
         chat.setPreferredSize(new Dimension(550,350));
         chat.setEditable(false);
+        JScrollPane chatScrollPane = new JScrollPane(chat);
         chatScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         add(chatScrollPane);
+    }
+
+    public JEditorPane getChat() {
+        return chat;
     }
 }

@@ -21,4 +21,12 @@ public class ChatInputPanel extends JPanel {
         add(messageScrollPane);
         add(sendMessage);
     }
+
+    public JEditorPane getMessage() {
+        return message;
+    }
+
+    public JButton getSendMessage() {
+        return sendMessage;
+    }
 }
